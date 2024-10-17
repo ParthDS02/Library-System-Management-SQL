@@ -7,7 +7,8 @@
 
 This project demonstrates the implementation of a Library Management System using SQL. It includes creating and managing tables, performing CRUD operations, and executing advanced SQL queries. The goal is to showcase skills in database design, manipulation, and querying.
 
-![Library_project](https://github.com/najirh/Library-System-Management---P2/blob/main/library.jpg)
+![Library-System-Management](https://github.com/user-attachments/assets/a90d6c9c-2040-40b2-aa2b-9f3c3415259b)
+
 
 ## Objectives
 
@@ -18,8 +19,19 @@ This project demonstrates the implementation of a Library Management System usin
 
 ## Project Structure
 
-### 1. Database Setup
-![ERD](https://github.com/najirh/Library-System-Management---P2/blob/main/library_erd.png)
+### 1. Data Model 
+![Data Model](https://github.com/user-attachments/assets/6fcb2ee6-bf96-4c9f-8f06-441a0940bd30)
+
+This is a relational data model for a Library Management System created using PostgreSQL. The schema consists of multiple interconnected tables:
+
+**Branch**: Contains details about library branches including branch_id, address, and manager information.
+**Employees**: Contains employee data like emp_id, name, position, salary, and the branch they work at.
+**Members**: Stores member details such as member_id, name, address, and registration date.
+**Books**: Holds book information including isbn, title, category, rental price, and author details.
+**Issued Status**: Manages information about books issued to members, containing data like issued_id, issued_member_id, issued_book_isbn, issued_emp_id, and dates.
+**Return Status**: Tracks details about book returns, including return_id, return_book_name, return_date, and return_book_isbn.
+
+The tables are connected using foreign keys such as branch_id (in both Branch and Employees), isbn (in Books and Issued Status), and member_id (in Members and Issued Status), enabling data relationships for tracking library operations.
 
 - **Database Creation**: Created a database named `library_db`.
 - **Table Creation**: Created tables for branches, employees, members, books, issued status, and return status. Each table includes relevant columns and relationships.
