@@ -24,14 +24,21 @@ This project demonstrates the implementation of a Library Management System usin
 
 This is a relational data model for a Library Management System created using PostgreSQL. The schema consists of multiple interconnected tables:
 
-**Branch**: Contains details about library branches including branch_id, address, and manager information.
-**Employees**: Contains employee data like emp_id, name, position, salary, and the branch they work at.
-**Members**: Stores member details such as member_id, name, address, and registration date.
-**Books**: Holds book information including isbn, title, category, rental price, and author details.
-**Issued Status**: Manages information about books issued to members, containing data like issued_id, issued_member_id, issued_book_isbn, issued_emp_id, and dates.
-**Return Status**: Tracks details about book returns, including return_id, return_book_name, return_date, and return_book_isbn.
+- **Branch**: Contains details about library branches including branch_id, address, and manager information.
 
-The tables are connected using foreign keys such as branch_id (in both Branch and Employees), isbn (in Books and Issued Status), and member_id (in Members and Issued Status), enabling data relationships for tracking library operations.
+- **Employees**: Contains employee data like emp_id, name, position, salary, and the branch they work at.
+
+- **Members**: Stores member details such as member_id, name, address, and registration date.
+
+- **Books**: Holds book information including isbn, title, category, rental price, and author details.
+
+- **Issued Status**: Manages information about books issued to members, containing data like issued_id, issued_member_id, issued_book_isbn, issued_emp_id, and dates.
+
+- **Return Status**: Tracks details about book returns, including return_id, return_book_name, return_date, and return_book_isbn.
+
+
+- The tables are connected using foreign keys such as branch_id (in both Branch and Employees), isbn (in Books and Issued Status), and member_id (in Members and Issued Status), enabling data relationships for tracking library operations.
+
 
 - **Database Creation**: Created a database named `library_db`.
 - **Table Creation**: Created tables for branches, employees, members, books, issued status, and return status. Each table includes relevant columns and relationships.
@@ -118,15 +125,3 @@ CREATE TABLE return_status
             FOREIGN KEY (return_book_isbn) REFERENCES books(isbn)
 );
 
-## Reports
-
-- **Database Schema**: Detailed table structures and relationships.
-- **Data Analysis**: Insights into book categories, employee salaries, member registration trends, and issued books.
-- **Summary Reports**: Aggregated data on high-demand books and employee performance.
-
-## Conclusion
-
-This project demonstrates the application of SQL skills in creating and managing a library management system. It includes database setup, data manipulation, and advanced querying, providing a solid foundation for data management and analysis.
-
-
-Thank you for your interest in this project!
